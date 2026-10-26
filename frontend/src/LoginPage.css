@@ -1,0 +1,211 @@
+
+/* Fondo general de la página */
+.login-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+
+  background:
+    radial-gradient(ellipse at 50% 0%, #203858, transparent 55%),
+    #101b2b;
+
+  color: #edf3ff;
+  font-family: inherit;
+}
+
+/* Contenedor del formulario */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Botón para regresar a la pantalla anterior */
+.login-back {
+  margin-bottom: 28px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #a0aec4;
+  font: inherit;
+  cursor: pointer;
+}
+
+.login-back:hover {
+  color: #edf3ff;
+}
+
+/* Logotipo y texto superior */
+.login-header {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.login-logo {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.login-logo span {
+  color: #5b91ff;
+}
+
+.login-header p {
+  margin: 8px 0 0;
+  color: #a0aec4;
+  font-size: 0.9rem;
+}
+
+/* Título y descripción */
+.login-intro {
+  margin-bottom: 28px;
+}
+
+.login-intro h2 {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+}
+
+.login-intro p {
+  margin: 0;
+  color: #a0aec4;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Campos del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  margin-bottom: 8px;
+  color: #dce6f7;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.login-form input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 22px;
+  padding: 12px 14px;
+
+  border: 1px solid #2b3c53;
+  border-radius: 10px;
+  outline: none;
+
+  background: #152338;
+  color: #edf3ff;
+  font: inherit;
+  font-size: 0.9rem;
+
+  transition: border-color 180ms ease;
+}
+
+.login-form input::placeholder {
+  color: #74849d;
+}
+
+.login-form input:focus {
+  border-color: #5b91ff;
+}
+
+/* Mensajes informativos */
+.login-message {
+  margin: 0 0 16px;
+  color: #ffb4b4;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+/* Botón azul de inicio de sesión */
+.login-submit {
+  min-height: 50px;
+  margin-top: 2px;
+  padding: 14px 20px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #5b91ff;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 650;
+
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    transform 180ms ease;
+}
+
+.login-submit:hover {
+  background: #80aaff;
+  transform: translateY(-1px);
+}
+
+/* Enlace para crear una cuenta */
+.login-register {
+  margin: 28px 0 0;
+  color: #a0aec4;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-register button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #80aaff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-register button:hover {
+  color: #ffffff;
+}
+
+/* Accesibilidad con teclado */
+.login-submit:focus-visible,
+.login-back:focus-visible,
+.login-register button:focus-visible {
+  outline: 3px solid #80aaff;
+  outline-offset: 4px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 480px) {
+  .login-page {
+    align-items: flex-start;
+    padding: 24px 20px;
+  }
+
+  .login-back {
+    margin-bottom: 24px;
+  }
+
+  .login-header {
+    margin-bottom: 30px;
+  }
+}
+
+/* Respeta la preferencia de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .login-form input,
+  .login-submit {
+    transition: none;
+  }
+
+  .login-submit:hover {
+    transform: none;
+  }
+}

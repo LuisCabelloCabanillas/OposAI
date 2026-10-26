@@ -1,0 +1,118 @@
+
+/* Fondo general, compartiendo la paleta de OposIA */
+.welcome-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      #203858,
+      transparent 55%
+    ),
+    #101b2b;
+
+  color: #edf3ff;
+  font-family: inherit;
+}
+
+/* Contenido central */
+.welcome-content {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Nombre y logotipo */
+.welcome-logo {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1.1;
+}
+
+.welcome-logo span {
+  color: #5b91ff;
+}
+
+/* Texto bajo el nombre */
+.welcome-subtitle {
+  margin: 14px 0 40px;
+  color: #a0aec4;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Botones de acceso */
+.welcome-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 14px;
+}
+
+.welcome-button {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 20px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.welcome-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Botón azul: iniciar sesión */
+.welcome-button-primary {
+  background: #5b91ff;
+  color: #ffffff;
+}
+
+.welcome-button-primary:hover {
+  background: #80aaff;
+}
+
+/* Botón blanco: crear cuenta */
+.welcome-button-secondary {
+  background: #edf3ff;
+  color: #101b2b;
+}
+
+.welcome-button-secondary:hover {
+  background: #ffffff;
+}
+
+/* Accesibilidad: navegación con teclado */
+.welcome-button:focus-visible {
+  outline: 3px solid #80aaff;
+  outline-offset: 4px;
+}
+
+/* Respeta la preferencia de movimiento del usuario */
+@media (prefers-reduced-motion: reduce) {
+  .welcome-button {
+    transition: none;
+  }
+
+  .welcome-button:hover {
+    transform: none;
+  }
+}
